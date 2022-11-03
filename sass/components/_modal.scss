@@ -1,0 +1,211 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 28, 41, 0.345);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    background-color: var(--card-background);
+
+    width: 528px;
+    min-height: 581px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    padding: 40px;
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+}
+
+.modal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   &:hover,
+&:focus {
+    fill: var(--accent-color);
+   }
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 12px;
+
+    color: var(--title-color);
+}
+
+.service-form {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-text {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: var(--main-color);
+    margin-bottom: 4px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-left: 12px;
+    transform: translateY(-50%);
+}
+
+
+.service-input:focus+.input-icon {
+    fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.service-input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    padding-left: 42px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus {
+        border-color: var(--accent-color);
+          }
+}
+
+.form-text {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+    
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+        border-color: var(--accent-color);
+    }
+}
+
+
+.chekbox-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contract {
+    font: inherit;
+    color: var(--accent-color);
+}
+
+.check-icon {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+
+.input-check:checked+.chekbox-text span {
+    background-color: var(--accent-color);
+    border-color: transparent;
+    fill: var(--white-color);
+}
+
+.input-check:focus+.chekbox-text span {
+    border-color: var(--accent-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.service-btn {
+    font-family: inherit;
+    min-width: 200px;
+    height: 50px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+.btn-send {
+    text-align: center;
+    margin-top: 30px;
+}
