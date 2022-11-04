@@ -1,18 +1,31 @@
 .team {
     background: var(--secondary-babackground-color);
     text-align: center;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) { 
+        padding-top: 94px;
+        padding-bottom: 94px;}
 }
 
 .team__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    @media screen and (min-width: 1200px) { display: flex;
+        gap: 30px;}
+   
 }
 
 
 .team__item {
-    width: calc((100% - 90px) / 4);
+    background-position: center;
+    width: 100%;
+    @media screen and (min-width: 768px) 
+    {  width: calc((100% - 30px) / 2); }
+    @media screen and (min-width: 1200px) 
+    {  width: calc((100% - 90px) / 4); }
 
     background: var(--card-background);
 
