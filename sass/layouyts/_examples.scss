@@ -1,6 +1,10 @@
 .examples {
-    text-align: center;
-    padding-bottom: 94px;
+display: none;
+    @media screen and (min-width: 1200px) 
+    { display: block;
+         text-align: center;
+        padding-bottom: 94px;}
+   
 }
 
 .examples__list {
