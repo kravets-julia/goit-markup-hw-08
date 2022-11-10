@@ -12,7 +12,8 @@
     @media screen and (min-width: 1200px) 
     {  display: flex;
         flex-direction: row;
-         align-items: baseline;}
+         align-items: baseline;
+         text-align: left;}
 }
    
 
@@ -26,8 +27,7 @@
         align-items: baseline;
         gap: 165px;}
         @media screen and (min-width: 1200px) 
-        {  
-            gap: 70px;}
+        {   gap: 70px;}
         
    
 }
@@ -44,6 +44,9 @@
 
 .address{
     margin-bottom: 60px;
+    @media screen and (min-width: 1200px) 
+    {   margin-bottom: 0;}
+ 
 }
 
 .address__link{
@@ -68,6 +71,8 @@ text-decoration: none;
 
 .join{
     margin-bottom: 60px;
+    @media screen and (min-width: 1200px) 
+    {   margin-bottom: 0;}
 }
 
 .subscribe {
@@ -113,7 +118,7 @@ text-decoration: none;
 
 .subscribe__input {
     @media screen and (max-width: 767px) 
-    {   width: 358px;      }
+    {   width: 100%;      }
     
     @media screen and (min-width: 768px) 
     {   width: 450px;      }
